@@ -1,0 +1,77 @@
+function doGet(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet();
+  var userSheet = sheet.getSheetByName(Users);
+  var attendanceSheet = sheet.getSheetByName(Attendance);
+  var action = e.parameter.action;
+  
+  if (action == login) {
+    var id = e.parameter.id;
+    var userData = userSheet.getDataRange().getValues();
+    var userName = Unknown;
+    var userGroup = NA;
+    var userStatus = ;
+    var userRow = -1;
+
+   
+    for (var i = 1; i  userData.length; i++) {
+      if (userData[i][0] == id) {
+        userName = userData[i][1];
+        userGroup = userData[i][2];
+        userStatus = userData[i][3];
+        userRow = i + 1;
+        break;
+      }
+    }
+
+    if (userStatus.toString().toLowerCase() == delete) {
+      userSheet.deleteRow(userRow); 
+      return ContentService.createTextOutput(COMMANDDELETE);
+    }
+
+    
+    if (userName == Unknown  userName == ) {
+      userSheet.appendRow([id, New User, -, Active]);
+      return ContentService.createTextOutput(New User Registered);
+    }
+
+    
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var attendanceData = attendanceSheet.getDataRange().getValues();
+    var lastRowIndex = -1;
+
+    for (var j = attendanceData.length - 1; j = 0; j--) {
+      var rowDate = new Date(attendanceData[j][2]);
+      rowDate.setHours(0, 0, 0, 0);
+      if (attendanceData[j][1] == id && rowDate.getTime() == today.getTime()) {
+        lastRowIndex = j + 1;
+        break;
+      }
+    }
+
+    var currentTime = new Date();
+    
+    if (lastRowIndex == -1) {
+      
+      attendanceSheet.appendRow([userName, id, new Date(), currentTime.toLocaleTimeString(), ---, userGroup]);
+      return ContentService.createTextOutput(Welcome  + userName + Grp + userGroup);
+    } else {
+      
+      var checkInTime = new Date(attendanceData[lastRowIndex-1][2]); 
+      var timeParts = attendanceData[lastRowIndex-1][3].split( ); 
+
+      var lastActionTime = new Date(); 
+      
+      var diff = (currentTime - new Date(attendanceSheet.getRange(lastRowIndex, 3).getValue().getTime() + 0))  1000  60;
+      
+      
+      if (diff  5) {
+        return ContentService.createTextOutput(Already In + userName);
+      }
+      
+     
+      attendanceSheet.getRange(lastRowIndex, 5).setValue(currentTime.toLocaleTimeString());
+      return ContentService.createTextOutput(Goodbye  + userName + Grp + userGroup);
+    }
+  }
+}
