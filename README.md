@@ -54,11 +54,11 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ---
 ## Developed by  
-* ** Abdelhalim Mohamed
-* ** Ahmed Fargaly
-* ** Abdelrahman Essam
-* ** Amr Abdelbaky
-* ** Enas Ibrahim 
-* ** Salma Amer
-* ** Malak Tamer
-* ** Fatma Helmy
+* Abdelhalim Mohamed
+* Ahmed Fargaly
+* Abdelrahman Essam
+* Amr Abdelbaky
+* Enas Ibrahim 
+* Salma Amer
+* Malak Tamer
+* Fatma Helmy
