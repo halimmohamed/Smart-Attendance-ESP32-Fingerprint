@@ -54,12 +54,4 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ---
 ## Developed by  
-* Abdelhalim Mohamed
-* Ahmed Fargaly
-* Abdelrahman El Nemr
-* Amr Abdelbaky
 * Abdelrahman El Attar
-* Enas El Nassag
-* Salma Amer
-* Malak Tamer
-* Fatma Helmy
