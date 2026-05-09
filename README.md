@@ -54,4 +54,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ---
 ## Developed by  
-* Abdelrahman El Attar
+* Abdelhalim Mohamed      *Enas El Nassag
+* Abdelrahman El Attar    *
+* Abdelrahman El Attar    *
