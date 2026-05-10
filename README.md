@@ -56,7 +56,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## Developed by  
 * Abdelhalim Mohamed
 * Ahmed Fargaly 
-* Abdelrahman Esaam
+* Abdelrahman Essam
 * Abdelrahman El Attar
 * Amr Abdelbaki
 * Enas El Nassag
