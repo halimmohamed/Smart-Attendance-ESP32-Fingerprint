@@ -7,7 +7,7 @@
 // --- إعدادات الشبكة والجوجل شيت ---
 const char* ssid = "Halim";
 const char* password = "00000000";
-String googleScriptURL = "https://script.google.com/macros/s/AKfycbwefDKS80oP5ktOnrM3dg7kCR91NbMKUNSg7HU8BIR6-wEbuPNWoB2cXLlAz3qU8ak9/exec"; // الصق الرابط هنا
+String googleScriptURL = "https://script.google.com/macros/s/AKfycbwefDKS80oP5ktOnrM3dg7kCR91NbMKUNSg7HU8BIR6-wEbuPNWoB2cXLlAz3qU8ak9/exec";
 
 // --- تعريف البنات (Pins) ---
 #define RXD2 16
